@@ -1,0 +1,152 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: 
+   Date:   
+   
+   Filename: lake_styles.css
+
+*/
+
+body {
+   border-left: calc(3vw) solid rgb(203,204,138);
+   border-right: calc(3vw) solid rgb(203,204,138);
+}
+
+/* 定义自定义字体 */
+@font-face {
+   font-family: 'Champagne';
+   src: url('cac_champagne.woff') format('woff'), url('cac_champagne.ttf') format('truetype');
+ }
+ 
+@font-face {
+   font-family: 'DobkinPlain';
+   src: url('dobkinplain.woff') format('woff'), url('dobkinplain.ttf') format('truetype');
+}
+ 
+.font {
+   font-family: 'Champagne', sans-serif;
+   font-size:2.5em; /*大小*/
+   font-weight:200; /*粗细*/
+   line-height: 10px;
+   padding-left:10px;
+}
+
+section#leftcol > p {
+   padding-left:20px;
+   padding-right:20px; 
+}
+
+aside#left_left {
+   background-color: #e3a28e;
+}
+
+#left_left h1 {
+   text-align: center;
+   font-size: 1.5em;
+ }
+
+aside#left_right {
+   background-color: #cebb70;
+   margin-right:20px;
+   padding-left: 10px;
+   padding-right:10px;
+}
+
+#left_right h1 {
+   text-align: center;
+   font-size: 1.5em;
+}
+
+#left_right h2 {
+   font-size: 1.2em;
+}
+
+/* 设置默认的链接颜色为白色 */
+header > nav > ul > li > a {
+   color: white;
+   text-decoration: none; /* 移除下划线 */
+   display: inline-block; /* 使链接能够正确对齐 */
+   padding: 1em; /* 添加一点内边距以改善点击区域 */
+}
+
+/* 当鼠标悬停或聚焦时保持颜色不变 */
+header > nav > ul > li > a:hover,
+header > nav > ul > li > a:focus {
+   color: white;
+}
+
+/* 当链接被激活（点击）时保持颜色不变 */
+header > nav > ul > li > a:active {
+   color: white;
+}
+
+body > div {
+	display: flex; /* 使用Flexbox布局 */
+	flex-direction: row; /* 行方向 */
+	min-height: 100vh; /* 最小高度为视口高度 */
+}
+
+/* 修改左栏 */
+section#leftcol {
+	background-color: black;
+	color: white;
+}
+
+/* 修改右栏 */
+section#rightcol {
+	background-color: #582d5a;
+	color: white; /* 如果需要，可以设置文字颜色 */
+   flex-grow: 1; /* 允许右侧列增长以填充剩余空间 */
+}
+
+/* 去除 section#rightcol 内部 li 内部链接的下划线 */
+section#rightcol li a {
+   color: grey; /* 链接颜色为白色 */
+   text-decoration: none; /* 移除下划线 */
+}
+
+/* 当鼠标悬停或聚焦时保持颜色不变 */
+section#rightcol li a:hover,
+section#rightcol li a:focus {
+   color: white;
+}
+
+/* 当链接被激活（点击）时保持颜色不变 */
+section#rightcol li a:active {
+   color: white;
+}
+
+section#rightcol li{
+   list-style:none; /*去掉点*/
+}
+
+section#rightcol h2 {
+   color: white; /* 字体颜色为白色 */
+}
+
+section#rightcol > nav > h2 {
+   font-size:2em;
+   font-weight:400;
+   padding-left:40px;
+}
+
+section#rightcol > nav > ul {
+   padding-left:80px;
+}
+
+#rightcol > blockquote{
+   color: rgb(221, 43, 234);
+}
+
+footer {
+	color:whitesmoke;
+   background:grey;
+   text-align: center;
+   padding:5px;
+}
